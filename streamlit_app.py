@@ -16,8 +16,8 @@ session = cnx.session()
 ingredients = session.table("smoothies.public.fruit_options").select(col('FRUIT_NAME'), col('SEARCH_ON'))
 #st.dataframe(data=ingredients, use_container_width=True)
 pd_df = ingredients.to_pandas()
-st.dataframe(pd_df)
-st.stop()
+#st.dataframe(pd_df)
+#st.stop()
 
 name = st.text_input('Enter your name here: ')
 ingredient_list = st.multiselect(
